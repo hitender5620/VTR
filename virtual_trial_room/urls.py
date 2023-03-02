@@ -14,19 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import *
-from virtual_trial_room import views
+from . import views
+
 
 urlpatterns = [
-    
-    path('admin/', admin.site.urls),
-    
+    path('admin/', admin.site.urls), 
     path('', views.home, name='home'),
-   
-   
+    path('new_form', views.new_form),
+    
 ]
 
 if settings.DEBUG:
