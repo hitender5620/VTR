@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 
 
@@ -8,3 +9,5 @@ class posts(models.Model):
 
     def __str__(self):
         return self.title
+    
+
