@@ -20,4 +20,3 @@ class myloginForm(AuthenticationForm):
         strip=False,
         widget = forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class':'form-control'}),
     )
-    
